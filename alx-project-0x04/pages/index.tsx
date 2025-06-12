@@ -1,8 +1,6 @@
 import Button from "@/components/common/Button";
 import { useRouter } from "next/router";
 import { PageRouteProps } from "@/interface";
-// Let's import the css file for global styles
-import "@/styles/globals.css";
 
 export default function Home() {
   const router = useRouter()

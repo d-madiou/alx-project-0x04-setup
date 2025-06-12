@@ -1,7 +1,6 @@
 import Button from "@/components/common/Button";
 import { useRouter } from "next/router";
 import { PageRouteProps } from "@/interface";
-// Let's import the css file for global styles
 import "@/styles/globals.css";
 
 export default function Home() {
@@ -18,16 +17,17 @@ export default function Home() {
       <h1 className="text-4xl font-bold text-gray-800 mb-4">
         Welcome to Splash App!
       </h1>
-      <p className="text-lg text-gray-600 mb-8">
+      <p className="text-lg text-gray-600 mb-8 bg-red">
         Your one-stop platform for everything AI you need. Start exploring by
         navigating to our features below.
       </p>
 
       {/* Navigation Options */}
-      <div className="flex gap-6">
+      <div className="flex gap-10">
         <Button action={() => routeToNextPage({ pageRoute: '/generate-text-ai' })} buttonLabel="Generate Text" buttonBackgroundColor="blue" />
         <Button action={() => routeToNextPage({ pageRoute: '/text-to-image'})} buttonLabel="Text to Image" buttonBackgroundColor="green" />
         <Button action={() => routeToNextPage({ pageRoute: '/counter-app'})} buttonLabel="Contact us" buttonBackgroundColor="orange" />
+        
       </div>
     </div>
   );
